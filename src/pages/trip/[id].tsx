@@ -2,8 +2,7 @@ import { useRouter } from 'next/router'
 import Layout from '../../components/Layout'
 import TripDetails from '../../components/TripDetails'
 import Link from 'next/link'
-import { FaArrowLeft } from 'react-icons/fa'
-import tripsData from '../../content/trips.json'
+import tripsData from '@/content/trips.json'
 
 export default function TripPage() {
   const router = useRouter()
@@ -26,9 +25,6 @@ export default function TripPage() {
   return (
     <Layout>
       <div className="space-y-6">
-        <Link href="/" className="inline-flex items-center text-secondary hover:underline font-christmas text-bold">
-          <FaArrowLeft className="mr-2" /> Back to All Trips
-        </Link>
         <TripDetails {...trip} />
       </div>
     </Layout>

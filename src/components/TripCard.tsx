@@ -2,15 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-interface TripCardProps {
+type TripCardProps = {
   id: string
   title: string
   image: string
   description: string
-  totalPrice: number
 }
 
-export default function TripCard({ id, title, image, description, totalPrice }: TripCardProps) {
+export default function TripCard({ id, title, image, description }: TripCardProps) {
   const [isUnwrapped, setIsUnwrapped] = useState(false)
 
   const handleUnwrap = () => {
@@ -52,9 +51,6 @@ export default function TripCard({ id, title, image, description, totalPrice }: 
         <div className="p-4 font-raleway">
           <h2 className="text-2xl font-semibold mb-2 text-primary font-christmas">{title}</h2>
           <p className="text-foreground mb-2 text-xl">{description}</p>
-          <p className="text-lg font-semibold text-secondary hidden">
-            ${totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-          </p>
         </div>
       </div>
     </Link>

@@ -27,12 +27,6 @@ export default function Home(props: HomeProps) {
     }
   }, [RELEASE_DATE])
 
-  const calculateTotalPrice = (trip: typeof trips[0]): number => {
-    const flightPrice = parseFloat(trip.flights.price) || 0
-    const hotelPrice = parseFloat(trip.hotel.price) || 0
-    return flightPrice + hotelPrice
-  }
-
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (password === 'doop') {
@@ -96,7 +90,6 @@ export default function Home(props: HomeProps) {
               title={trip.title}
               image={trip.image}
               description={trip.description}
-              totalPrice={calculateTotalPrice(trip)}
             />
           ))}
         </div>

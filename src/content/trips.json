@@ -1,9 +1,9 @@
 [
   {
     "id": "hawaii",
-    "title": "Aloha Paradise",
-    "image": "/images/hawaii-hero.webp",
-    "description": "Experience the magic of Maui...",
+    "title": "HA-WEE-WEE",
+    "image": "/images/hotels/hi/diamondhead.jpg",
+    "description": "Kaylee's buying so why not...",
     "flights": {
       "outbound": {
         "departure": "Monday July 1, 2025 8:15 AM",
@@ -16,22 +16,20 @@
         "arrival": "Thursday July 11, 2025 6:45 AM",
         "airline": "Delta Airlines",
         "flightNumber": "DL1107"
-      },
-      "price": "2107.90"
+      }
     },
     "hotel": {
-      "name": "Grand Wailea, A Waldorf Astoria Resort",
-      "link": "https://www.grandwailea.com/",
+      "name": "Sheraton Maui Resort & Spa",
+      "link": "https://www.marriott.com/en-us/hotels/hnmsi-sheraton-maui-resort-and-spa",
       "address": "3850 Wailea Alanui Dr, Wailea, HI 96753, United States",
-      "description": "Fronting the most beautiful beach on Maui, Grand Wailea, A Waldorf Astoria Resort promises an experience like no other. This luxurious 40-acre resort features world-class amenities including the award-winning Spa Grande, nine pools with waterslides, renowned dining venues, and direct access to Wailea Beach. Immerse yourself in Hawaiian culture through lei making, hula lessons, and traditional luaus while enjoying spectacular ocean views and tropical gardens.",
+      "description": "Discover the Beauty of Kaanapali Beach",
       "images": [
-        "/images/hawaii-hotel-hero.webp",
-        "/images/hotels/hawaii/beach.webp",
-        "/images/hotels/hawaii/pool.webp",
-        "/images/hotels/hawaii/room.webp",
-        "/images/hotels/hawaii/aerial.webp"
-      ],
-      "price": "4209.00"
+        "/images/hotels/hi/sheraton-maui-1.avif",
+        "/images/hotels/hi/sheraton-maui-2.jpeg",
+        "/images/hotels/hi/sheraton-maui-3.webp",
+        "/images/hotels/hi/sheraton-maui-4.avif",
+        "/images/hotels/hi/sheraton-maui-5.jpeg"
+      ]
     },
     "activities": [
       {

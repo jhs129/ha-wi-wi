@@ -16,7 +16,6 @@ export type Trip = {
       airline: string
       flightNumber: string
     }
-    price: string
   }
   hotel: {
     name: string
@@ -24,7 +23,6 @@ export type Trip = {
     address: string
     description: string
     images: string[]
-    price: string
   }
   activities: Array<{
     text: string

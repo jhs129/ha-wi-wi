@@ -5,37 +5,33 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { useRef } from "react";
 
-interface FlightInfo {
-  departure: string;
-  arrival: string;
-  airline: string;
-  flightNumber: string;
+type FlightInfo = {
+  departure: string
+  arrival: string
+  airline: string
+  flightNumber: string
 }
 
-interface HotelInfo {
-  name: string;
-  address: string;
-  description: string;
-  link: string;
-  images: string[];
-  price: string;
-}
-
-interface ActivityInfo {
-  text: string;
-  image: string;
-}
-
-interface TripDetailsProps {
-  title: string;
-  image: string;
+type TripDetailsProps = {
+  id: string
+  title: string
+  image: string
+  description: string
   flights: {
-    outbound: FlightInfo;
-    return: FlightInfo;
-    price: string;
-  };
-  hotel: HotelInfo;
-  activities: ActivityInfo[];
+    outbound: FlightInfo
+    return: FlightInfo
+  }
+  hotel: {
+    name: string
+    link: string
+    address: string
+    description: string
+    images: string[]
+  }
+  activities: Array<{
+    text: string
+    image: string
+  }>
 }
 
 export default function TripDetails({
@@ -45,16 +41,6 @@ export default function TripDetails({
   hotel,
   activities,
 }: TripDetailsProps) {
-  const totalPrice =
-    (parseFloat(flights.price) || 0) + (parseFloat(hotel.price) || 0);
-
-  const formatPrice = (price: string) => {
-    return parseFloat(price || "0").toLocaleString("en-US", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -84,13 +70,6 @@ export default function TripDetails({
             <h1 className="text-4xl font-bold text-light font-christmas">
               {title}
             </h1>
-            <div className="hiddentext-2xl font-bold text-light whitespace-nowra hidden">
-              Total: $
-              {totalPrice.toLocaleString("en-US", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </div>
           </div>
         </div>
       </div>
@@ -100,9 +79,6 @@ export default function TripDetails({
           <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaHotel className="mr-2" /> Hotel
           </h2>
-          <div className="text-xl font-semibold text-primary hidden">
-            ${formatPrice(hotel.price)}
-          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
@@ -163,9 +139,6 @@ export default function TripDetails({
           <h2 className="text-2xl font-semibold flex items-center font-christmas">
             <FaPlane className="mr-2" /> Flight Information
           </h2>
-          <div className="text-xl font-semibold text-primary hidden">
-            ${formatPrice(flights.price)}
-          </div>
         </div>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-24">
           <div>

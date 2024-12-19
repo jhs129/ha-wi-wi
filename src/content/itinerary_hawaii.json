@@ -1,0 +1,140 @@
+{
+    "id": "hawaii_trip",
+    "title": "Hawaii Itinerary - Maui and Oahu",
+    "dates": {
+        "departure_date": "July 1, 2025",
+        "return_date": "July 10, 2025"
+    },
+    "locations": [
+        {
+            "name": "Los Angeles, California",
+            "check_in": "July 1, 2025",
+            "check_out": "July 2, 2025",
+            "hotel": {
+                "name": "Residence Inn Los Angeles LAX/Century Boulevard",
+                "address": "5933 West Century Boulevard, Los Angeles, CA, 90045, United States",
+                "additional_info": {
+                    "daily_resort_fee": "$0",
+                    "description": "Suite-style rooms near LAX with complimentary airport shuttle."
+                }
+            },
+            "images": [
+                {
+                    "url": "/images/la/residence-inn-exterior.jpg",
+                    "caption": "Residence Inn LAX exterior view"
+                },
+                {
+                    "url": "/images/la/lax-area.jpg",
+                    "caption": "LAX area at night"
+                }
+            ]
+        },
+        {
+            "name": "Maui, Hawaii",
+            "check_in": "July 2, 2025",
+            "check_out": "July 6, 2025",
+            "hotel": {
+                "name": "Sheraton Maui Resort & Spa",
+                "address": "2605 Kaanapali Pkwy, Lahaina - Maui, HI, 96761, United States",
+                "additional_info": {
+                    "daily_resort_fee": "$49",
+                    "description": "Ocean-View Room with complimentary upgrades from Partial-Ocean-View Room."
+                }
+            },
+            "images": [
+                {
+                    "url": "/images/maui/black-rock-beach.jpg",
+                    "caption": "Black Rock Beach at sunset, steps from the Sheraton Maui"
+                },
+                {
+                    "url": "/images/maui/haleakala-sunrise.jpg",
+                    "caption": "Sunrise view from Haleakala National Park"
+                },
+                {
+                    "url": "/images/maui/road-to-hana.jpg",
+                    "caption": "Scenic Road to Hana waterfalls"
+                }
+            ]
+        },
+        {
+            "name": "Oahu, Hawaii",
+            "check_in": "July 6, 2025",
+            "check_out": "July 9, 2025",
+            "hotel": {
+                "name": "Sheraton Waikiki Beach Resort",
+                "address": "2255 Kalakaua Ave, Honolulu - Oahu, HI, 96815, United States",
+                "additional_info": {
+                    "daily_resort_fee": "$52",
+                    "description": "Oceanfront Room on floors 4-9 with luxurious amenities."
+                }
+            },
+            "images": [
+                {
+                    "url": "/images/oahu/waikiki-beach.jpg",
+                    "caption": "Waikiki Beach with Diamond Head in the background"
+                },
+                {
+                    "url": "/images/oahu/pearl-harbor.jpg",
+                    "caption": "USS Arizona Memorial at Pearl Harbor"
+                },
+                {
+                    "url": "/images/oahu/north-shore.jpg",
+                    "caption": "Sunset at North Shore's Banzai Pipeline"
+                }
+            ]
+        },
+        {
+            "name": "Los Angeles, California",
+            "check_in": "July 9, 2025",
+            "check_out": "July 10, 2025",
+            "hotel": {
+                "name": "Residence Inn Los Angeles LAX/Century Boulevard",
+                "address": "5933 West Century Boulevard, Los Angeles, CA, 90045, United States",
+                "additional_info": {
+                    "daily_resort_fee": "$0",
+                    "description": "Suite-style rooms near LAX with complimentary airport shuttle."
+                }
+            },
+            "images": [
+                {
+                    "url": "/images/la/residence-inn-exterior.jpg",
+                    "caption": "Residence Inn LAX exterior view"
+                },
+                {
+                    "url": "/images/la/lax-area.jpg",
+                    "caption": "LAX area at night"
+                }
+            ]
+        }
+    ],
+    "flights": [
+        {
+            "flight_type": "Atlanta to Los Angeles",
+            "flight_number": "TBD",
+            "departure": "July 1, 2025",
+            "arrival": "July 1, 2025",
+            "airline": "Delta Airlines"
+        },
+        {
+            "flight_type": "Maui to Oahu",
+            "flight_number": "HA 335",
+            "departure": "July 6, 2025 4:15 PM",
+            "arrival": "July 6, 2025 4:58 PM",
+            "airline": "Hawaiian Airlines"
+        },
+        {
+            "flight_type": "Oahu to Los Angeles",
+            "flight_number": "TBD",
+            "departure": "July 9, 2025",
+            "arrival": "July 9, 2025",
+            "airline": "Delta Airlines"
+        },
+        {
+            "flight_type": "Los Angeles to Atlanta",
+            "flight_number": "TBD",
+            "departure": "July 10, 2025",
+            "arrival": "July 10, 2025",
+            "airline": "Delta Airlines"
+        }
+    ]
+}

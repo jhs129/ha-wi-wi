@@ -3,12 +3,12 @@ import Layout from '../../components/Layout'
 import TripDetails from '../../components/TripDetails'
 import Link from 'next/link'
 import { FaArrowLeft } from 'react-icons/fa'
-import { trips } from '../../content/trips'
+import tripsData from '../../content/trips.json'
 
 export default function TripPage() {
   const router = useRouter()
   const { id } = router.query
-  const trip = trips.find(trip => trip.id === id)
+  const trip = tripsData.find(trip => trip.id === id)
 
   if (!trip) {
     return (

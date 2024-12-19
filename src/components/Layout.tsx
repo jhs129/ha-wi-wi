@@ -11,8 +11,8 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>Boopmas.org | A Very Boopadoop Christmas</title>
-        <meta name="description" content="A special gift of three weekend trips" />
+        <title>Schneider Family Christmas</title>
+        <meta name="description" content="Schneider Family Christmas" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen flex flex-col relative bg-slate-200">
@@ -26,22 +26,22 @@ export default function Layout({ children }: LayoutProps) {
             zIndex: 1000
           }}
         />
-        <header className="bg-primary py-6 mb-8">
-          <div className="container mx-auto text-center text-light md:flex md:items-center lg:gap-16">
+        <header className="bg-primary w-full mx-auto py-6 mb-8 items-center">
+          <div className="container mx-auto text-center text-light flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="px-4">
               <Link href="/">
                 <Image
-                  src="/images/boopmas.png"
-                  alt="Boopmas.org"
+                  src="/images/logo.png"
+                  alt="Schneider Family Christmas"
                   width={125}
                   height={100}
-                  className="mx-auto md:mx-0"
+                  className="mx-auto"
                   priority
                 />
               </Link>
             </div>
-            <h1 className="text-3xl md:text-6xl font-bold mb-2 font-christmas md:block">
-              Merry Christmas Boopadoop!
+            <h1 className="text-3xl md:text-6xl font-bold font-christmas">
+              Merry Christmas!
             </h1>
           </div>
         </header>

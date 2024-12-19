@@ -1,0 +1,12 @@
+{
+  "unauthorized": {
+    "title": "Silly Papa Dave, go back to sleep! Santa is not here yet! 🎅",
+    "subtitle": "Come back on Christmas Day or enter the double secret password:",
+    "passwordPlaceholder": "Enter password",
+    "submitButton": "Submit"
+  },
+  "authorized": {
+    "title": "Ok, it's time for the pressence!",
+    "description": "Open your gift with that glint in your eye, and get ready to fly!"
+  }
+} 

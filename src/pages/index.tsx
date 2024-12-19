@@ -1,9 +1,11 @@
 import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 import TripCard from '../components/TripCard'
-import { trips } from '../content/trips'
+import { GetStaticProps } from 'next'
+import { HomeProps } from '../types/homeProps'
 
-export default function Home() {
+export default function Home(props: HomeProps) {
+  const { textContent, trips } = props
   const [isAuthorized, setIsAuthorized] = useState(false)
   const [password, setPassword] = useState('')
   
@@ -11,10 +13,17 @@ export default function Home() {
   
   useEffect(() => {
     const currentDate = new Date()
-    const storedAuth = localStorage.getItem('isAuthorized') === 'true'
+    const storedAuth = localStorage.getItem('isAuthorized')
+    const authExpiration = localStorage.getItem('authExpiration')
     
-    if (currentDate >= RELEASE_DATE || storedAuth) {
+    if (currentDate >= RELEASE_DATE) {
       setIsAuthorized(true)
+    } else if (storedAuth === 'true' && authExpiration && new Date(authExpiration) > currentDate) {
+      setIsAuthorized(true)
+    } else {
+      // Clear expired auth
+      localStorage.removeItem('isAuthorized')
+      localStorage.removeItem('authExpiration')
     }
   }, [RELEASE_DATE])
 
@@ -29,6 +38,11 @@ export default function Home() {
     if (password === 'doop') {
       setIsAuthorized(true)
       localStorage.setItem('isAuthorized', 'true')
+      
+      // Set expiration 24 hours from now
+      const expiration = new Date()
+      expiration.setHours(expiration.getHours() + 24)
+      localStorage.setItem('authExpiration', expiration.toISOString())
     }
   }
 
@@ -37,9 +51,11 @@ export default function Home() {
       <Layout>
         <div className="space-y-8 text-center">
           <h1 className="text-4xl font-bold text-primary font-christmas">
-         Silly Boopadoop, go back to sleep! Santa is not here yet! 🎅
+            {textContent.unauthorized.title}
           </h1>
-          <p className="text-xl font-christmas">Come back on Christmas Day or enter the double secret password:</p>
+          <p className="text-xl font-christmas">
+            {textContent.unauthorized.subtitle}
+          </p>
           
           <form onSubmit={handlePasswordSubmit} className="max-w-sm mx-auto space-y-4">
             <input
@@ -47,13 +63,13 @@ export default function Home() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 border rounded-md"
-              placeholder="Enter password"
+              placeholder={textContent.unauthorized.passwordPlaceholder}
             />
             <button
               type="submit"
               className="px-6 py-2 text-light bg-primary rounded-md hover:bg-primary/80"
             >
-              Submit
+              {textContent.unauthorized.submitButton}
             </button>
           </form>
         </div>
@@ -65,14 +81,14 @@ export default function Home() {
     <Layout>
       <div className="space-y-8">
         <h1 className="text-4xl font-bold text-center text-primary font-christmas">
-          Ok, it&apos;s time for the pressence!
+          {textContent.authorized.title}
         </h1>
         <div className="text-xl text-center font-christmas">
-          <p>Open each gift with that glint in your eye,
-          pick perfect present, and get ready to fly!
-          Three choices of badulting with your favorite guy!</p>
+          <p>
+            {textContent.authorized.description}
+          </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
           {trips.map((trip) => (
             <TripCard 
               key={trip.id} 
@@ -84,9 +100,21 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="text-center mt-4 hidden">placeholder text here</div>
       </div>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const textContent = await import('@/content/text.json')
+  const trips = await import('@/content/trips.json')
+
+  return {
+    props: {
+      textContent: textContent.default,
+      trips: trips.default
+    },
+    revalidate: 60 * 60 * 24 // 24 hours
+  }
 }
 

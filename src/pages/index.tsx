@@ -86,7 +86,7 @@ export default function Home(props: HomeProps) {
           <TripCard 
             id={trips.id}
             title={trips.title}
-            image={trips.locations[0].images[0].url}
+            images={trips.images}
             description={`${trips.dates.departure_date} - ${trips.dates.return_date}`}
           />
         </div>

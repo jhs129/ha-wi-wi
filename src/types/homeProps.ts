@@ -1,7 +1,17 @@
 import { Trip } from './trip'
-import { TextContent } from './textContent'
 
 export interface HomeProps {
-  textContent: TextContent
+  textContent: {
+    unauthorized: {
+      title: string
+      subtitle: string
+      passwordPlaceholder: string
+      submitButton: string
+    }
+    authorized: {
+      title: string
+      description: string
+    }
+  }
   trips: Trip
 }

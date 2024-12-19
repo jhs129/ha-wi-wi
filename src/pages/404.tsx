@@ -5,7 +5,9 @@ export default function Custom404() {
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-        <p className="mb-4">The page you're looking for doesn't exist.</p>
+        <p>
+          We&apos;re sorry, but we can&apos;t find the page you&apos;re looking for.
+        </p>
         <Link 
           href="/" 
           className="text-secondary hover:underline font-christmas text-bold"

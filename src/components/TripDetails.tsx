@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { useRef, useCallback } from "react";
-import { Location, Flight } from "../types/trip";
+import { Location, Flight } from "@/types/trip";
 import type { RefCallback } from 'react'
 
 type TripDetailsProps = {
@@ -16,6 +16,7 @@ type TripDetailsProps = {
   }
   locations: Location[]
   flights: Flight[]
+  images: { url: string; caption: string }[]
 }
 
 export default function TripDetails({
@@ -23,6 +24,7 @@ export default function TripDetails({
   dates,
   locations,
   flights,
+  images,
 }: TripDetailsProps) {
   const sliderSettings = {
     dots: true,
@@ -51,7 +53,7 @@ export default function TripDetails({
     <div className="space-y-8">
       <div className="relative w-full h-[400px]">
         <Image
-          src={locations[0].images[0].url}
+          src={images[0].url}
           alt={title}
           fill
           className="object-cover rounded-lg"

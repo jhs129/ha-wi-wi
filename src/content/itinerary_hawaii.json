@@ -1,10 +1,21 @@
 {
     "id": "hawaii",
-    "title": "Hawaii Itinerary - Maui and Oahu",
+    "title": "Ha-wee-wee",
     "dates": {
         "departure_date": "July 1, 2025",
         "return_date": "July 10, 2025"
     },
+    "description": "Hawaii is a beautiful place to visit. We're going to Maui and Oahu.",
+    "images": [
+        {
+            "url": "/images/hotels/hi/diamondhead.jpg",
+            "caption": "Beautiful Hawaiian sunset"
+        },
+        {
+            "url": "/images/hotels/hi/sheraton-maui-1.avif",
+            "caption": "Hawaiian paradise overview"
+        }
+    ],
     "locations": [
         {
             "name": "Los Angeles, California",

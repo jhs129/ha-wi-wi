@@ -91,38 +91,42 @@ export default function TripDetails({
                 {location.images.map((image) => (
                   <div 
                     key={image.url} 
-                    className="relative h-[300px]"
+                    className="relative flex flex-col gap-2"
                     onClick={() => handleSlideClick(index)}
                   >
-                    <Image
-                      src={image.url}
-                      alt={image.caption}
-                      fill
-                      className="object-cover rounded-lg"
-                    />
+                    <div className="relative h-[300px]">
+                      <Image
+                        src={image.url}
+                        alt={image.caption}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <p className="text-center text-gray-700 text-sm">
+                      {image.caption}
+                    </p>
                   </div>
                 ))}
               </Slider>
             </div>
             <div className="md:w-1/2">
+           
               <p>
                 <strong>Hotel:</strong> {location.hotel.name}
               </p>
               <p>
                 <strong>Address:</strong> {location.hotel.address}
               </p>
-              <p>
-                <strong>Resort Fee:</strong> {location.hotel.additional_info.daily_resort_fee}
-              </p>
-              <p>
-                <strong>Description:</strong> {location.hotel.additional_info.description}
+              <p></p>
+              <p className="my-4">
+                 {location.location_description}
               </p>
             </div>
           </div>
         </div>
       ))}
 
-      <div className="bg-light rounded-lg shadow-md p-6">
+      <div className="bg-light rounded-lg shadow-md p-6 hidden">
         <h2 className="text-2xl font-semibold mb-4 flex items-center font-christmas">
           <FaPlane className="mr-2" /> Flight Information
         </h2>

@@ -21,6 +21,7 @@
             "name": "Los Angeles, California",
             "check_in": "July 1, 2025",
             "check_out": "July 2, 2025",
+            "location_description": "A brief stopover in Los Angeles before our Hawaiian adventure. Located near LAX for convenience.",
             "hotel": {
                 "name": "Residence Inn Los Angeles LAX/Century Boulevard",
                 "address": "5933 West Century Boulevard, Los Angeles, CA, 90045, United States",
@@ -31,19 +32,21 @@
             },
             "images": [
                 {
-                    "url": "/images/la/residence-inn-exterior.jpg",
-                    "caption": "Residence Inn LAX exterior view"
+                    "url": "/images/hotels/la/manhattan-beach.webp",
+                    "caption": "Manhattan Beach"
                 },
                 {
-                    "url": "/images/la/lax-area.jpg",
-                    "caption": "LAX area at night"
+                    "url": "/images/hotels/la/lax-firepit.webp",
+                    "caption": "Residence Inn LAX exterior view"
                 }
+
             ]
         },
         {
             "name": "Maui, Hawaii",
             "check_in": "July 2, 2025",
             "check_out": "July 6, 2025",
+            "location_description": "Known as the Valley Isle, Maui offers stunning beaches, the famous Road to Hana, and the majestic Haleakala National Park.",
             "hotel": {
                 "name": "Sheraton Maui Resort & Spa",
                 "address": "2605 Kaanapali Pkwy, Lahaina - Maui, HI, 96761, United States",
@@ -71,6 +74,7 @@
             "name": "Oahu, Hawaii",
             "check_in": "July 6, 2025",
             "check_out": "July 9, 2025",
+            "location_description": "Home to famous Waikiki Beach, historic Pearl Harbor, and the legendary North Shore surfing spots.",
             "hotel": {
                 "name": "Sheraton Waikiki Beach Resort",
                 "address": "2255 Kalakaua Ave, Honolulu - Oahu, HI, 96815, United States",
@@ -98,6 +102,7 @@
             "name": "Los Angeles, California",
             "check_in": "July 9, 2025",
             "check_out": "July 10, 2025",
+            "location_description": "A convenient final stop near LAX before heading home.",
             "hotel": {
                 "name": "Residence Inn Los Angeles LAX/Century Boulevard",
                 "address": "5933 West Century Boulevard, Los Angeles, CA, 90045, United States",

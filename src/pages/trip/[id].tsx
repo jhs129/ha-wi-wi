@@ -1,29 +1,21 @@
-import { useRouter } from 'next/router'
-import Layout from '../../components/Layout'
-import TripDetails from '../../components/TripDetails'
-import Link from 'next/link'
-import itineraryData from '@/content/itinerary_hawaii.json'
+import { GetStaticProps, GetStaticPaths } from 'next'
+import { Trip, ItineraryItem, Flight, Location } from '@/types/trip'
+import Layout from '@/components/Layout'
+import TripDetails from '@/components/TripDetails'
 
-export default function TripPage() {
-  const router = useRouter()
-  const { id } = router.query
-  
-  // For now we only have one itinerary, so we can just check if the ID matches
-  const trip = id === itineraryData.id ? itineraryData : null
+type RawItineraryItem = {
+  type: string
+  id: string
+  startDate: string
+  endDate: string
+  data: Flight | Location  // Use our existing types instead of any
+}
 
-  if (!trip) {
-    return (
-      <Layout>
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Trip not found</h1>
-          <Link href="/" className="text-secondary hover:underline font-christmas text-bold">
-            Return to homepage
-          </Link>
-        </div>
-      </Layout>
-    )
-  }
+interface TripPageProps {
+  trip: Trip
+}
 
+export default function TripPage({ trip }: TripPageProps) {
   return (
     <Layout>
       <div className="space-y-6">
@@ -31,5 +23,34 @@ export default function TripPage() {
       </div>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps<TripPageProps> = async ({ params }) => {
+  const tripData = await import(`@/content/itinerary_${params?.id}.json`)
+  
+  // Transform the raw data to ensure proper typing
+  const trip: Trip = {
+    ...tripData.default,
+    itinerary: tripData.default.itinerary.map((item: RawItineraryItem): ItineraryItem => ({
+      ...item,
+      type: item.type as 'flight' | 'stay'
+    }))
+  }
+
+  return {
+    props: {
+      trip
+    },
+    revalidate: 3600
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { id: 'hawaii' } }
+    ],
+    fallback: false
+  }
 }
 

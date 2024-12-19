@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { useRef, useCallback } from "react";
-import { Location, Flight } from "@/types/trip";
+import { Location, Flight, ItineraryItem } from "@/types/trip";
 import type { RefCallback } from 'react'
 
 type TripDetailsProps = {
@@ -14,16 +14,14 @@ type TripDetailsProps = {
     departure_date: string
     return_date: string
   }
-  locations: Location[]
-  flights: Flight[]
+  itinerary: ItineraryItem[]
   images: { url: string; caption: string }[]
 }
 
 export default function TripDetails({
   title,
   dates,
-  locations,
-  flights,
+  itinerary,
   images,
 }: TripDetailsProps) {
   const sliderSettings = {
@@ -34,16 +32,11 @@ export default function TripDetails({
     slidesToScroll: 1,
     arrows: true,
     swipe: true,
+    autoplay: false,
+    adaptiveHeight: true
   };
 
   const locationSliders = useRef<(Slider | null)[]>([]);
-
-  const handleSlideClick = useCallback((sliderIndex: number) => {
-    const slider = locationSliders.current[sliderIndex];
-    if (slider) {
-      slider.slickNext();
-    }
-  }, []);
 
   const setSliderRef = useCallback((index: number): RefCallback<Slider> => (el) => {
     locationSliders.current[index] = el;
@@ -72,79 +65,79 @@ export default function TripDetails({
         </div>
       </div>
 
-      {locations.map((location, index) => (
-        <div key={location.name + index} className="bg-light rounded-lg shadow-md p-6">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-semibold flex items-center font-christmas">
-              <FaHotel className="mr-2" /> {location.name}
-            </h2>
-            <div className="text-sm text-gray-600">
-              {location.check_in} - {location.check_out}
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="md:w-1/2">
-              <Slider 
-                {...sliderSettings}
-                ref={setSliderRef(index)}
-              >
-                {location.images.map((image) => (
-                  <div 
-                    key={image.url} 
-                    className="relative flex flex-col gap-2"
-                    onClick={() => handleSlideClick(index)}
-                  >
-                    <div className="relative h-[300px]">
-                      <Image
-                        src={image.url}
-                        alt={image.caption}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
+      {itinerary.map((item, index) => (
+        <div key={item.id} className="bg-light rounded-lg shadow-md p-6">
+          {item.type === 'stay' ? (
+            // Location Card
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-semibold flex items-center font-christmas">
+                  <FaHotel className="mr-2" /> {(item.data as Location).name}
+                </h2>
+                <div className="text-sm text-gray-600">
+                  {item.startDate} - {item.endDate}
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/2">
+                  {(item.data as Location).images?.length > 0 && (
+                    <div className="relative">
+                      <Slider {...sliderSettings} ref={setSliderRef(index)}>
+                        {(item.data as Location).images.map((image, imageIndex) => (
+                          <div key={imageIndex}>
+                            <div className="relative h-[300px] w-full">
+                              <Image
+                                src={image.url}
+                                alt={image.caption}
+                                fill
+                                className="object-cover rounded-lg"
+                              />
+                            </div>
+                            <p className="text-center text-gray-700 text-sm mt-2">
+                              {image.caption}
+                            </p>
+                          </div>
+                        ))}
+                      </Slider>
                     </div>
-                    <p className="text-center text-gray-700 text-sm">
-                      {image.caption}
-                    </p>
-                  </div>
-                ))}
-              </Slider>
+                  )}
+                </div>
+                <div className="md:w-1/2">
+               
+                  <p>
+                    <strong>Hotel:</strong> {(item.data as Location).hotel.name}
+                  </p>
+                  <p>
+                    <strong>Address:</strong> {(item.data as Location).hotel.address}
+                  </p>
+                  <p></p>
+                  <p className="my-4">
+                     {(item.data as Location).location_description}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="md:w-1/2">
-           
-              <p>
-                <strong>Hotel:</strong> {location.hotel.name}
-              </p>
-              <p>
-                <strong>Address:</strong> {location.hotel.address}
-              </p>
-              <p></p>
-              <p className="my-4">
-                 {location.location_description}
-              </p>
+          ) : (
+            // Flight Card
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-semibold flex items-center font-christmas">
+                  <FaPlane className="mr-2" /> {(item.data as Flight).flight_type}
+                </h2>
+                <div className="text-sm text-gray-600">
+                  {item.startDate}
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <p><strong>Airline:</strong> {(item.data as Flight).airline}</p>
+                <p><strong>Flight Number:</strong> {(item.data as Flight).flight_number}</p>
+                <p><strong>Departure:</strong> {(item.data as Flight).departure}</p>
+                <p><strong>Arrival:</strong> {(item.data as Flight).arrival}</p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       ))}
-
-      <div className="bg-light rounded-lg shadow-md p-6 hidden">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center font-christmas">
-          <FaPlane className="mr-2" /> Flight Information
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {flights.map((flight, index) => (
-            <div 
-              key={`${flight.flight_type}-${flight.flight_number || index}`} 
-              className="border-b pb-4 last:border-b-0"
-            >
-              <h3 className="text-xl font-medium mb-2">{flight.flight_type}</h3>
-              <p><strong>Departure:</strong> {flight.departure}</p>
-              <p><strong>Arrival:</strong> {flight.arrival}</p>
-              <p><strong>Airline:</strong> {flight.airline}</p>
-              <p><strong>Flight Number:</strong> {flight.flight_number}</p>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }

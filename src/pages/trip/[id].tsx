@@ -2,12 +2,14 @@ import { useRouter } from 'next/router'
 import Layout from '../../components/Layout'
 import TripDetails from '../../components/TripDetails'
 import Link from 'next/link'
-import tripsData from '@/content/trips.json'
+import itineraryData from '@/content/itinerary_hawaii.json'
 
 export default function TripPage() {
   const router = useRouter()
   const { id } = router.query
-  const trip = tripsData.find(trip => trip.id === id)
+  
+  // For now we only have one itinerary, so we can just check if the ID matches
+  const trip = id === itineraryData.id ? itineraryData : null
 
   if (!trip) {
     return (

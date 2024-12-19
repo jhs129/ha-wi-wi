@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 import TripCard from '../components/TripCard'
 import { GetStaticProps } from 'next'
-import { HomeProps } from '../types/homeProps'
+import { HomeProps } from '@/types/homeProps'
 
 export default function Home(props: HomeProps) {
   const { textContent, trips } = props
@@ -83,15 +83,12 @@ export default function Home(props: HomeProps) {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          {trips.map((trip) => (
-            <TripCard 
-              key={trip.id} 
-              id={trip.id}
-              title={trip.title}
-              image={trip.image}
-              description={trip.description}
-            />
-          ))}
+          <TripCard 
+            id={trips.id}
+            title={trips.title}
+            image={trips.locations[0].images[0].url}
+            description={`${trips.dates.departure_date} - ${trips.dates.return_date}`}
+          />
         </div>
       </div>
     </Layout>
@@ -100,7 +97,7 @@ export default function Home(props: HomeProps) {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const textContent = await import('@/content/text.json')
-  const trips = await import('@/content/trips.json')
+  const trips = await import('@/content/itinerary_hawaii.json')
 
   return {
     props: {

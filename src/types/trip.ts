@@ -1,31 +1,36 @@
+export type Location = {
+  name: string
+  check_in: string
+  check_out: string
+  hotel: {
+    name: string
+    address: string
+    additional_info: {
+      daily_resort_fee: string
+      description: string
+    }
+  }
+  images: Array<{
+    url: string
+    caption: string
+  }>
+}
+
+export type Flight = {
+  flight_type: string
+  flight_number: string
+  departure: string
+  arrival: string
+  airline: string
+}
+
 export type Trip = {
   id: string
   title: string
-  image: string
-  description: string
-  flights: {
-    outbound: {
-      departure: string
-      arrival: string
-      airline: string
-      flightNumber: string
-    }
-    return: {
-      departure: string
-      arrival: string
-      airline: string
-      flightNumber: string
-    }
+  dates: {
+    departure_date: string
+    return_date: string
   }
-  hotel: {
-    name: string
-    link: string
-    address: string
-    description: string
-    images: string[]
-  }
-  activities: Array<{
-    text: string
-    image: string
-  }>
+  locations: Location[]
+  flights: Flight[]
 } 

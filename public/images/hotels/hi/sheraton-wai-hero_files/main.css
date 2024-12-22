@@ -1,0 +1,37 @@
+
+/******* Styles **********/
+        em,i{font-style:italic;}
+        body{padding-top:0;background:#d2d2d2;font-family:"Source Sans Pro",helvetica,arial,sans-serif;}
+        p{font-size:14px;font-weight:normal;line-height:1.43em;margin-top:0;margin-bottom:12px;font-family:"Source Sans Pro",helvetica,arial,sans-serif;}
+        a{color:#134f8f;}
+        h1,.h1{margin-top:15px;margin-left:50px;margin-right:50px;font-size:30px;font-weight:bold;}
+        h3,.h3{font-size:20px;font-weight:bold;height:30px;padding:0;margin:8px;}
+        h4,.h4{font-size:16px;font-weight:bold;}
+        h4.text-left{width:200px;font-size:16px;font-weight:bold;}
+        h5{font-size:20px;}
+        h6.text-left{max-width:175px;}
+        .starter-template{padding-top:75px;text-align:center;}
+        .well{background-color:rgba(28,28,28,.5);max-height:300px;max-width:500px;margin:25px 50px;float:right;border-radius:0;border:0;}
+        .container{height:100%;}
+        .fill{height:100%;min-height:100%;background-color:#fff;}
+        .navbar-inverse{height:70px;background-color:#4c4c4c;}
+        .navbar-form.navbar-right:last-child{margin:-25px 0;}
+        .navbar-nav.navbar-right:last-child{margin:-13px 0;}
+        .brand-logos{position:relative;margin:0 auto;border-top:1px solid #f1f2f2;border-bottom:1px solid #f1f2f2;padding:10px 0;}
+        .brand-logos .box{margin:0 auto;display:block;}
+        .btn-success{color:#fff;background-color:#a01c2e;border-color:#60121c;float:right;clear:right;margin:50px 50px 0 0;}
+        .btn-success:hover,.btn-success:active{color:#fff;background-color:#8e1a29;border-color:#60121c;}
+        .btn-group{margin:0 0 20px 50px;}
+        .marketing-text{margin:10px 50px;font-size:14px;font-weight:normal;line-height:1.43em;}
+        .legal{margin:50px 50px 10px 50px;font-size:12px;font-weight:normal;}
+        .container .jumbotron{border-radius:0;padding:0;}
+        .jumbotron{margin:20px 0 0;background-image:url("");background-repeat:no-repeat;background-position:center;background-color:transparent;height:415px;background-size:1040px 415px;}
+        .jumbotron h2,.jumbotron .h2{font-size:24px;color:#fff;}
+        .jumbotron p{color:#fff;}
+        .leaderboard-container{position:relative;padding-bottom:65px;padding-top:35px;height:0;margin:25px 50px;}
+        .leaderboard-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+        a.pop-up-window{background-repeat:no-repeat;background-position:center right;display:inline;padding-right:2px;}
+        ol li{margin-left:40px;}
+        html[dir='rtl'] .square-container{float:left;}
+/******* Keyframes *******/
+/******* Animations ******/

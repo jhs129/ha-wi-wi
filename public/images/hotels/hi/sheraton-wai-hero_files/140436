@@ -1,0 +1,64 @@
+
+(function () {
+    var scr = document.createElement('script');
+    var snippet = "var i = document.createElement('img');\
+    i.setAttribute('alt', '');\
+    i.setAttribute('height', '1');\
+    i.setAttribute('width', '1');\
+    i.setAttribute('style', 'display: none;');\
+    i.setAttribute('src', 'https://ad.doubleclick.net/ddm/activity/src=4810757;type=sales;cat=5myqls5f;qty=1;cost=0;u1=;u16=https://deals.marriott.com/sheraton/usa/hi/honolulu/sheraton-waikiki-milestone;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;npa=;ord=UNKNOWN');\
+    document.body.appendChild(i);\
+    ";
+
+    scr.type = 'text/javascript';
+    scr.async = true;
+    if (scr.textContent) {
+        scr.textContent = snippet;
+    } else {
+        scr.text = snippet;
+    }
+    document.getElementsByTagName('head')[0].appendChild(scr);
+})();
+(function () {var t=document.createElement('img');t.async=!0,t.width=1,t.height=1,t.style.display='none',t.src='https://ib.adnxs.com/px?id=1565798&t=1';document.body.appendChild(t)})();
+(function () {var t=document.createElement('img');t.async=!0,t.width=1,t.height=1,t.style.display='none',t.src='https://ib.adnxs.com/seg?add=29464183&t=1';document.body.appendChild(t)})();
+
+(function () {
+    var scr = document.createElement('script');
+    var snippet = "var i = document.createElement('img');\
+i.setAttribute('alt', '');\
+i.setAttribute('height', '1');\
+i.setAttribute('width', '1');\
+i.setAttribute('style', 'display: none;');\
+i.setAttribute('src', 'https://cm.g.doubleclick.net/pixel?google_cm=true&google_hm=YTE2NmMwYzctZDM2Yi1hMDJmLTVlNTUtNDQzYmZlZDZhNjZj&google_nid=sojern__adx_open_bidder_seat&sjrn_id=3qahdG2sD9_4dHWaE4wllAmyliRTkqKBi2TdUfWIUPVI17YM0HZ_s6iY4BxGgP33&sjrn_lbid=0844c6c652dc67c208cbc6538703f4de&sjrn_pid=140436&sjrn_ts=1734910459');\
+document.body.appendChild(i);\
+";
+
+    scr.type = 'text/javascript';
+    scr.async = true;
+    if (scr.textContent) {
+        scr.textContent = snippet;
+    } else {
+        scr.text = snippet;
+    }
+    document.getElementsByTagName('head')[0].appendChild(scr);
+})();
+(function () {
+    var scr = document.createElement('script');
+    var snippet = "var i = document.createElement('img');\
+i.setAttribute('alt', '');\
+i.setAttribute('height', '1');\
+i.setAttribute('width', '1');\
+i.setAttribute('style', 'display: none;');\
+i.setAttribute('src', 'https://cm.g.doubleclick.net/pixel?google_hm=YTE2NmMwYzctZDM2Yi1hMDJmLTVlNTUtNDQzYmZlZDZhNjZj&google_nid=sojern_adh&sjrn_lbid=0844c6c652dc67c208cbc6538703f4de&sjrn_ts=1734910459');\
+document.body.appendChild(i);\
+";
+
+    scr.type = 'text/javascript';
+    scr.async = true;
+    if (scr.textContent) {
+        scr.textContent = snippet;
+    } else {
+        scr.text = snippet;
+    }
+    document.getElementsByTagName('head')[0].appendChild(scr);
+})();

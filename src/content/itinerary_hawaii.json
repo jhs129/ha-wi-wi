@@ -77,9 +77,9 @@
       "endDate": "July 6, 2025",
       "data": {
         "name": "Maui, Hawaii",
-        "check_in": "July 1, 2025",
-        "check_out": "July 2, 2025",
-        "location_description": "A brief stopover in Los Angeles...",
+        "check_in": "July 2, 2025",
+        "check_out": "July 6, 2025",
+        "location_description": "Immerse yourself in Hawaiian paradise at the legendary Sheraton Maui Resort & Spa, nestled on 23 oceanfront acres at iconic Pu'u Keka'a (Black Rock). Wake up to breathtaking views of the Pacific and neighboring islands from your private lanai, then spend your days snorkeling in crystal-clear waters, lounging by the 142-yard lagoon-style pool, or",
         "hotel": {
           "name": "Sheraton Maui Resort & Spa",
           "address": "2605 Kaanapali Pkwy, Lahaina - Maui, HI, 96761",
@@ -91,12 +91,20 @@
         },
         "images": [
           {
-            "url": "/images/hotels/la/manhattan-beach.webp",
-            "caption": "Manhattan Beach"
+            "url": "/images/hotels/hi/sheraton-maui-1.avif",
+            "caption": "Sheraton Maui Resort View"
           },
           {
-            "url": "/images/hotels/la/lax-firepit.webp",
-            "caption": "Hotel Firepit"
+            "url": "/images/hotels/hi/sheraton-maui-3.webp",
+            "caption": "Beach Access"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-maui-4.avif",
+            "caption": "Beach Access"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-maui-5.jpeg",
+            "caption": "Beach Access"
           }
         ]
       }
@@ -123,7 +131,7 @@
         "name": "Waikiki Beach, Hawaii",
         "check_in": "July 6, 2025",
         "check_out": "July 9, 2025",
-        "location_description": "A brief stopover in Los Angeles...",
+        "location_description": "Experience the ultimate Hawaiian getaway at the Sheraton Waikiki Beach Resort. Located on the iconic Waikiki Beach, this resort offers luxurious accommodations, world-class amenities, and unparalleled access to the island's most popular attractions. Enjoy stunning ocean views, relax on the beach, or take a dip in the resort's infinity pool. With its prime location and exceptional service, the Sheraton Waikiki Beach Resort is the perfect place to soak up the sun and make unforgettable memories in paradise.",
         "hotel": {
           "name": "Sheraton Waikiki Beach Resort",
           "address": "2255 Kalakaua Ave, Honolulu - Oahu, HI, 96815",
@@ -135,13 +143,22 @@
         },
         "images": [
           {
-            "url": "/images/hotels/la/manhattan-beach.webp",
-            "caption": "Manhattan Beach"
+            "url": "/images/hotels/hi/sheraton-wai-0.webp",
+            "caption": "Sheraton Maui Resort View"
           },
           {
-            "url": "/images/hotels/la/lax-firepit.webp",
-            "caption": "Hotel Firepit"
+            "url": "/images/hotels/hi/sheraton-wai-1.jpg",
+            "caption": "Surfing in Waikiki"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-wai-2.webp",
+            "caption": "Hotel Entrance"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-wai-3.webp",
+            "caption": "Daytime View of Waikiki and Diamond Head"
           }
+
         ]
       }
     },

@@ -8,7 +8,7 @@
   "description": "Hawaii is a beautiful place to visit. We're going to Maui and Oahu.",
   "images": [
     {
-      "url": "/images/hotels/hi/diamondhead.jpg",
+      "url": "/images/hero.avif",
       "caption": "Beautiful Hawaiian sunset"
     }
   ],
@@ -39,6 +39,7 @@
         "hotel": {
           "name": "Residence Inn Los Angeles LAX/Century Boulevard",
           "address": "5933 West Century Boulevard, Los Angeles, CA, 90045",
+          "website": "https://www.marriott.com/en-us/hotels/laxrl-residence-inn-los-angeles-lax-century-boulevard/",
           "additional_info": {
             "daily_resort_fee": "$0",
             "description": "Suite-style rooms near LAX..."
@@ -82,6 +83,7 @@
         "hotel": {
           "name": "Sheraton Maui Resort & Spa",
           "address": "2605 Kaanapali Pkwy, Lahaina - Maui, HI, 96761",
+          "website": "https://www.marriott.com/en-us/hotels/hnmsi-sheraton-maui-resort-and-spa/",
           "additional_info": {
             "daily_resort_fee": "$0",
             "description": "Suite-style rooms near LAX..."
@@ -125,6 +127,7 @@
         "hotel": {
           "name": "Sheraton Waikiki Beach Resort",
           "address": "2255 Kalakaua Ave, Honolulu - Oahu, HI, 96815",
+          "website": "https://www.marriott.com/en-us/hotels/hnlws-sheraton-waikiki-beach-resort/",
           "additional_info": {
             "daily_resort_fee": "$0",
             "description": "Suite-style rooms near LAX..."

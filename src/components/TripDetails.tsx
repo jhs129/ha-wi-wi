@@ -80,10 +80,10 @@ export default function TripDetails({
               </div>
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="md:w-1/2">
-                  {(item.data as Location).images?.length > 0 && (
+                  {(item.data as Location).images && (item.data as Location).images!.length > 0 && (
                     <div className="relative">
                       <Slider {...sliderSettings} ref={setSliderRef(index)}>
-                        {(item.data as Location).images.map((image, imageIndex) => (
+                        {((item.data as Location).images || []).map((image, imageIndex) => (
                           <div key={imageIndex}>
                             <div className="relative h-[300px] w-full">
                               <Image
@@ -103,16 +103,27 @@ export default function TripDetails({
                   )}
                 </div>
                 <div className="md:w-1/2">
-               
                   <p>
-                    <strong>Hotel:</strong> {(item.data as Location).hotel.name}
+                    <strong>Hotel:</strong>{' '}
+                    {item.type === 'stay' && (item.data as Location).hotel.website ? (
+                      <a 
+                        href={(item.data as Location).hotel.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        {(item.data as Location).hotel.name}
+                      </a>
+                    ) : (
+                      (item.data as Location).hotel.name
+                    )}
                   </p>
                   <p>
-                    <strong>Address:</strong> {(item.data as Location).hotel.address}
+                    <strong>Address:</strong> {item.type === 'stay' && (item.data as Location).hotel.address}
                   </p>
                   <p></p>
                   <p className="my-4">
-                     {(item.data as Location).location_description}
+                     {item.type === 'stay' && (item.data as Location).location_description}
                   </p>
                 </div>
               </div>

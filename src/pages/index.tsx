@@ -38,7 +38,9 @@ export default function Home(props: HomeProps) {
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "pine@pple") {
+    const correctPassword = process.env.NEXT_PUBLIC_ACCESS_PASSWORD;
+
+    if (password === correctPassword) {
       setIsAuthorized(true);
       sessionStorage.setItem("isAuthorized", "true");
       setShowError(false);

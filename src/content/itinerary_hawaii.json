@@ -1,140 +1,225 @@
 {
-    "id": "hawaii_trip",
-    "title": "Hawaii Itinerary - Maui and Oahu",
-    "dates": {
-        "departure_date": "July 1, 2025",
-        "return_date": "July 10, 2025"
+  "id": "hawaii",
+  "title": "Kaylee has finally made good on her promise to take us to Ha-wee-wee",
+  "dates": {
+    "departure_date": "July 1, 2025",
+    "return_date": "July 10, 2025"
+  },
+  "description": "Kaylee has finally made good on her promise to take us to Ha-wee-wee. ",
+  "images": [
+    {
+      "url": "/images/hero.webp",
+      "caption": "Beautiful Hawaiian sunset"
+    }
+  ],
+  "itinerary": [
+    {
+      "type": "flight",
+      "id": "flight-1",
+      "startDate": "July 1, 2025",
+      "endDate": "July 1, 2025",
+      "data": {
+        "flight_type": "Atlanta to Los Angeles",
+        "flight_number": "DL501",
+        "departure": "July 1, 2025 09:40 AM",
+        "arrival": "July 1, 2025 11:22 AM",
+        "airline": "Delta Airlines"
+      }
     },
-    "locations": [
-        {
-            "name": "Los Angeles, California",
-            "check_in": "July 1, 2025",
-            "check_out": "July 2, 2025",
-            "hotel": {
-                "name": "Residence Inn Los Angeles LAX/Century Boulevard",
-                "address": "5933 West Century Boulevard, Los Angeles, CA, 90045, United States",
-                "additional_info": {
-                    "daily_resort_fee": "$0",
-                    "description": "Suite-style rooms near LAX with complimentary airport shuttle."
-                }
-            },
-            "images": [
-                {
-                    "url": "/images/la/residence-inn-exterior.jpg",
-                    "caption": "Residence Inn LAX exterior view"
-                },
-                {
-                    "url": "/images/la/lax-area.jpg",
-                    "caption": "LAX area at night"
-                }
-            ]
+    {
+      "type": "stay",
+      "id": "stay-1",
+      "startDate": "July 1, 2025",
+      "endDate": "July 2, 2025",
+      "data": {
+        "name": "Los Angeles, California",
+        "check_in": "July 1, 2025",
+        "check_out": "July 2, 2025",
+        "location_description": "Our Hawaiian adventure begins with a brief stopover in Los Angeles, where we'll catch our first glimpse of the Pacific Ocean! Just a short ride from LAX, we can spend the afternoon exploring Manhattan Beach's charming pier and watching surfers catch waves. The beach town offers excellent dining options along Manhattan Beach Boulevard. If we're feeling adventurous, we can rent bikes and cruise along The Strand, the beachfront bike path that offers stunning coastal views. For dinner, we might check out the nearby In-N-Out Burger for a true California experience, or enjoy fresh seafood at one of Manhattan Beach's local restaurants. With an early morning flight to Maui, we'll stay close to LAX at the comfortable Residence Inn, where we can relax by the outdoor firepit and rest up for our journey to paradise.",
+        "hotel": {
+          "name": "Residence Inn Los Angeles LAX/Century Boulevard",
+          "address": "5933 West Century Boulevard, Los Angeles, CA, 90045",
+          "website": "https://www.marriott.com/en-us/hotels/laxrl-residence-inn-los-angeles-lax-century-boulevard/",
+          "additional_info": {
+            "daily_resort_fee": "$0",
+            "description": "Suite-style rooms near LAX..."
+          }
         },
-        {
-            "name": "Maui, Hawaii",
-            "check_in": "July 2, 2025",
-            "check_out": "July 6, 2025",
-            "hotel": {
-                "name": "Sheraton Maui Resort & Spa",
-                "address": "2605 Kaanapali Pkwy, Lahaina - Maui, HI, 96761, United States",
-                "additional_info": {
-                    "daily_resort_fee": "$49",
-                    "description": "Ocean-View Room with complimentary upgrades from Partial-Ocean-View Room."
-                }
-            },
-            "images": [
-                {
-                    "url": "/images/maui/black-rock-beach.jpg",
-                    "caption": "Black Rock Beach at sunset, steps from the Sheraton Maui"
-                },
-                {
-                    "url": "/images/maui/haleakala-sunrise.jpg",
-                    "caption": "Sunrise view from Haleakala National Park"
-                },
-                {
-                    "url": "/images/maui/road-to-hana.jpg",
-                    "caption": "Scenic Road to Hana waterfalls"
-                }
-            ]
+        "images": [
+          {
+            "url": "/images/hotels/la/mb-sunset.jpg",
+            "caption": "Manhattan Beach"
+          },
+          {
+            "url": "/images/hotels/la/lax-firepit.webp",
+            "caption": "Hotel Firepit"
+          }
+        ]
+      }
+    },
+    {
+      "type": "flight",
+      "id": "flight-2",
+      "startDate": "July 2, 2025",
+      "endDate": "July 2, 2025",
+      "data": {
+        "flight_type": "Los Angeles to Maui",
+        "flight_number": "DL425",
+        "departure": "July 2, 2025 08:10 AM",
+        "arrival": "July 2, 2025 10:57 AM",
+        "airline": "Delta Airlines"
+      }
+    },
+    {
+      "type": "stay",
+      "id": "stay-2",
+      "startDate": "July 2, 2025",
+      "endDate": "July 6, 2025",
+      "data": {
+        "name": "Maui, Hawaii",
+        "check_in": "July 2, 2025",
+        "check_out": "July 6, 2025",
+        "location_description": "Our Hawaiian adventure continues at the legendary Sheraton Maui Resort & Spa, where we'll have four full days to explore the magic of Maui. Nestled along the breathtaking shores of Kaanapali Beach, Sheraton Maui Resort & Spa is where exceptional location finds deep intention. While our Kaanapali resort's nightly lele kawa, the cliff diving ritual, has gained legendary status, it represents just one facet of the immersive Hawaiian experience that awaits you. Feel the spirit of aloha infuse the grounds of our Lahaina resort with meticulously appointed accommodations, a large lagoon-style pool, and soothing treatments at The Spa at Black Rock. Embark on exhilarating ocean adventures, from snorkeling amidst vibrant coral reefs to sailing on catamarans that slice through crystal-clear waters. Discover wide open spaces on our 23-acre resort in Maui for soulful reflection and a deeper connection to nature. Over 80% of our Kaanapali hotel rooms offer ocean views, the ideal vantage point for whale watching and the sun setting into the Pacific. Immerse yourself in Maui's profound beauty, where the Kaanapali Beach resort lifestyle was born and perfected.",
+        "hotel": {
+          "name": "Sheraton Maui Resort & Spa",
+          "address": "2605 Kaanapali Pkwy, Lahaina - Maui, HI, 96761",
+          "website": "https://www.marriott.com/en-us/hotels/hnmsi-sheraton-maui-resort-and-spa/",
+          "additional_info": {
+            "daily_resort_fee": "$0",
+            "description": "From snorkeling in crystal-clear waters and floating in our lagoon-style pool to private dining under the stars, sunset s’mores roasting, and 3 miles of white sandy beach, our Kaanapali beach hotel offers matchless adventure by land and sea"
+          }
         },
-        {
-            "name": "Oahu, Hawaii",
-            "check_in": "July 6, 2025",
-            "check_out": "July 9, 2025",
-            "hotel": {
-                "name": "Sheraton Waikiki Beach Resort",
-                "address": "2255 Kalakaua Ave, Honolulu - Oahu, HI, 96815, United States",
-                "additional_info": {
-                    "daily_resort_fee": "$52",
-                    "description": "Oceanfront Room on floors 4-9 with luxurious amenities."
-                }
-            },
-            "images": [
-                {
-                    "url": "/images/oahu/waikiki-beach.jpg",
-                    "caption": "Waikiki Beach with Diamond Head in the background"
-                },
-                {
-                    "url": "/images/oahu/pearl-harbor.jpg",
-                    "caption": "USS Arizona Memorial at Pearl Harbor"
-                },
-                {
-                    "url": "/images/oahu/north-shore.jpg",
-                    "caption": "Sunset at North Shore's Banzai Pipeline"
-                }
-            ]
+        "images": [
+          {
+            "url": "/images/hotels/hi/sheraton-maui-1.avif",
+            "caption": "Sheraton Maui Resort View"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-maui-3.webp",
+            "caption": "Go snorkelying with the turtles!"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-maui-6.jpeg",
+            "caption": "Hawaiaan Fire show at sunset"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-maui-5.jpeg",
+            "caption": "An aerial view of the Sheraton Maui Resort & Spa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "flight",
+      "id": "flight-3",
+      "startDate": "July 6, 2025 16:15 PM",
+      "endDate": "July 6, 2025 16:58 PM",
+      "data": {
+        "flight_type": "Maui to Oahu",
+        "flight_number": "HA 335",
+        "departure": "July 6, 2025 16:15",
+        "arrival": "July 6, 2025 16:58",
+        "airline": "Hawaiian Airlines"
+      }
+    },
+    {
+      "type": "stay",
+      "id": "stay-3",
+      "startDate": "July 2, 2025",
+      "endDate": "July 6, 2025",
+      "data": {
+        "name": "Waikiki Beach, Hawaii",
+        "check_in": "July 6, 2025",
+        "check_out": "July 9, 2025",
+        "location_description": "Vivid by day, vibrant by night: Experience the new Sheraton Waikiki. Immerse yourself in the beauty of Oahu and our world-renowned Waikiki Beach resort at Sheraton Waikiki. Step into our exceptional oceanfront resort, which features newly renovated rooms and suites with spectacular ocean views. The Oahu resort is located on Waikiki Beach, just minutes from some of Honolulu's top attractions like Diamond Head Crater. Upscale shopping and family activities are located within walking distance. After a day exploring Hawaii, relax in our Waikiki resort’s award-winning outdoor pools, work out in our modern fitness center or dine on globally inspired cuisine at one of our hotel’s restaurants. ",
+        "hotel": {
+          "name": "Sheraton Waikiki Beach Resort",
+          "address": "2255 Kalakaua Ave, Honolulu - Oahu, HI, 96815",
+          "website": "https://www.marriott.com/en-us/hotels/hnlws-sheraton-waikiki-beach-resort/",
+          "additional_info": {
+            "daily_resort_fee": "$0",
+            "description": "Vivid by day, vibrant by night: Experience the new Sheraton Waikiki. Immerse yourself in the beauty of Oahu and our world-renowned Waikiki Beach resort at Sheraton Waikiki. Step into our exceptional oceanfront resort, which features newly renovated rooms and suites with spectacular ocean views. The Oahu resort is located on Waikiki Beach, just minutes from some of Honolulu's top attractions like Diamond Head Crater. Upscale shopping and family activities are located within walking distance. After a day exploring Hawaii, relax in our Waikiki resort’s award-winning outdoor pools, work out in our modern fitness center or dine on globally inspired cuisine at one of our hotel’s restaurants. If you're planning an event in Honolulu, Sheraton Waikiki offers one of Honolulu’s largest ballrooms, 16 meeting rooms, and dynamic indoor and outdoor event spaces. Let us welcome you to the island of Oahu at Sheraton Waikiki"
+          }
         },
-        {
-            "name": "Los Angeles, California",
-            "check_in": "July 9, 2025",
-            "check_out": "July 10, 2025",
-            "hotel": {
-                "name": "Residence Inn Los Angeles LAX/Century Boulevard",
-                "address": "5933 West Century Boulevard, Los Angeles, CA, 90045, United States",
-                "additional_info": {
-                    "daily_resort_fee": "$0",
-                    "description": "Suite-style rooms near LAX with complimentary airport shuttle."
-                }
-            },
-            "images": [
-                {
-                    "url": "/images/la/residence-inn-exterior.jpg",
-                    "caption": "Residence Inn LAX exterior view"
-                },
-                {
-                    "url": "/images/la/lax-area.jpg",
-                    "caption": "LAX area at night"
-                }
-            ]
-        }
-    ],
-    "flights": [
-        {
-            "flight_type": "Atlanta to Los Angeles",
-            "flight_number": "TBD",
-            "departure": "July 1, 2025",
-            "arrival": "July 1, 2025",
-            "airline": "Delta Airlines"
+        "images": [
+          {
+            "url": "/images/hotels/hi/sheraton-wai-0.webp",
+            "caption": "Watch the sunset over Diamond Head from the beachside infinity pool"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-wai-1.jpg",
+            "caption": "Surfing in Waikiki"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-wai-3.webp",
+            "caption": "Daytime View of Waikiki and Diamond Head"
+          },
+          {
+            "url": "/images/hotels/hi/pearl-harbor.webp",
+            "caption": "Visit Pearl Harbor"
+          },
+          {
+            "url": "/images/hotels/hi/sheraton-wai-7.avif",
+            "caption": "Daytime View of Waikiki and Diamond Head"
+          },      {
+            "url": "/images/hotels/hi/sheraton-wai-8.jpeg",
+            "caption": "Daytime View of Waikiki and Diamond Head"
+          }
+
+        ]
+      }
+    },
+    {
+      "type": "flight",
+      "id": "flight-4",
+      "startDate": "July 9, 2025",
+      "endDate": "July 9, 2025",
+      "data": {
+        "flight_type": "Oahu to Los Angeles",
+        "flight_number": "DL427",
+        "departure": "July 9, 2025 12:00 PM",
+        "arrival": "July 9, 2025 08:40 PM",
+        "airline": "Delta Airlines"
+      }
+    },
+    {
+      "type": "stay",
+      "id": "stay-1",
+      "startDate": "July 1, 2025",
+      "endDate": "July 2, 2025",
+      "data": {
+        "name": "Los Angeles, California",
+        "check_in": "July 9, 2025",
+        "check_out": "July 10, 2025",
+        "location_description": "A brief stopover in Los Angeles to break up the trip home.",
+        "hotel": {
+          "name": "Residence Inn Los Angeles LAX/Century Boulevard",
+          "address": "5933 West Century Boulevard, Los Angeles, CA, 90045",
+          "additional_info": {
+            "daily_resort_fee": "$0",
+            "description": "Suite-style rooms near LAX..."
+          }
         },
-        {
-            "flight_type": "Maui to Oahu",
-            "flight_number": "HA 335",
-            "departure": "July 6, 2025 4:15 PM",
-            "arrival": "July 6, 2025 4:58 PM",
-            "airline": "Hawaiian Airlines"
-        },
-        {
-            "flight_type": "Oahu to Los Angeles",
-            "flight_number": "TBD",
-            "departure": "July 9, 2025",
-            "arrival": "July 9, 2025",
-            "airline": "Delta Airlines"
-        },
-        {
-            "flight_type": "Los Angeles to Atlanta",
-            "flight_number": "TBD",
-            "departure": "July 10, 2025",
-            "arrival": "July 10, 2025",
-            "airline": "Delta Airlines"
-        }
-    ]
+        "images": [
+          {
+            "url": "/images/hotels/la/lax-firepit.webp",
+            "caption": "Hotel Firepit"
+          }
+        ]
+      }
+    },
+    {
+      "type": "flight",
+      "id": "flight-5",
+      "startDate": "July 10, 2025",
+      "endDate": "July 10, 2025",
+      "data": {
+        "flight_type": "Los Angeles to Atlanta",
+        "flight_number": "DL528",
+        "departure": "July 10, 2025 10:45 AM",
+        "arrival": "July 10, 2025 06:20 PM",
+        "airline": "Delta Airlines"
+      }
+    }
+  ]
 }

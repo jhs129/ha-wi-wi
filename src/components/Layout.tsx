@@ -31,7 +31,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="px-4">
               <Link href="/">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/Schneider-Christmas.png"
                   alt="Schneider Family Christmas"
                   width={125}
                   height={100}

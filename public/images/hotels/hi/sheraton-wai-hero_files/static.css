@@ -1,0 +1,45 @@
+/* CSS for the static Header and Footer */
+header, footer { margin:0;	padding:0;	border:0; font-size:100%; font:inherit; vertical-align:baseline; line-height:1; }
+
+/* HTML5 display-role reset for older browsers */
+footer, header, section { display:block; }
+header ol, header ul, footer ol, footer ul { list-style:none; }
+header blockquote, header q, footer blockquote, footer q {	quotes:none; }
+header blockquote:before, header blockquote:after, header q:before, header q:after, footer blockquote:before, footer blockquote:after, footer q:before, footer q:after { content: ''; content:none; }
+header table, footer table {	border-collapse:collapse; border-spacing:0; } 
+
+header .clearfix:after, footer .clearfix:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
+header .clearfix, footer .clearfix { display:inline-block; }
+header html[xmlns] .clearfix, footer html[xmlns] .clearfix { display:block; }
+header * html .clearfix, footer * html .clearfix { height:1%; }
+
+body {
+	font-size:16px;
+	font-family:"Source Sans Pro", SourceSansPro-Regular, "Calibri", Arial, "Helvetica", Helvetica, sans-serif;
+	color:#1c1c1c;
+}
+
+header .l-float-left { float:left; }
+header .l-float-right, footer .l-float-right { float:right; }
+header .l-padding-top-quarter, footer .l-padding-top-quarter { padding-top:0.25em; }
+header .l-padding-right, footer .l-padding-right { padding-right:1em; }
+header .t-uppercase-small, footer .t-uppercase-small { text-transform:uppercase; }
+header .t-border-top-lightstGry, footer .t-border-top-lightstGry { border-top:1px solid #ededed; }
+
+/* Footer treatment */
+footer { width:100%; max-width:1024px; margin:1rem auto; text-align:center; }
+footer #utilities-legal li { display:inline-block; float:none; margin:0 0.675rem 0; padding:0; }
+footer #t-legal-footer { padding:1.25em 0 0; }
+footer #t-legal-footer a:link { text-decoration:none; }
+footer #t-legal-footer a:hover { text-decoration:underline; }
+footer #t-legal-footer a, footer #t-legal-footer a:link, footer #t-legal-footer a:visited, footer #t-legal-footer a:hover { font-size:0.75em; color:#494949; }
+footer .t-copyright p { font-size:0.625em; line-height:1em; margin:0.675rem 0 0 0.675rem; color:#777; text-align:left; }
+
+/* Header treatment */
+header { width:100%; }
+header .t-header { height:3.625em; background-color:#919191; background-image:-webkit-linear-gradient(#777,#494949); background-image:-moz-linear-gradient(#777,#494949); background-image:-o-linear-gradient(#777,#494949); background-image:linear-gradient(#777,#494949); color:#fff; }
+header .t-header a:link, header .t-header a:visited, header .t-header a:active, header .t-header a:hover { color:#fff; text-decoration:none; }
+header .t-header a:hover { text-decoration:underline; }
+header .m-logo { padding: 1.05rem 0 0 1rem; }
+header .l-main-logo img{ width:130px; }
+

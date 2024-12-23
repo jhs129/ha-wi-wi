@@ -2,14 +2,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-type TripCardProps = {
+interface TripCardProps {
   id: string
   title: string
-  image: string
   description: string
+  images: {
+    url: string
+    caption: string
+  }[]
 }
 
-export default function TripCard({ id, title, image, description }: TripCardProps) {
+export default function TripCard({ id, title, description, images }: TripCardProps) {
   const [isUnwrapped, setIsUnwrapped] = useState(false)
 
   const handleUnwrap = () => {
@@ -42,7 +45,7 @@ export default function TripCard({ id, title, image, description }: TripCardProp
       <div className="bg-background rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 border">
         <div className="relative h-48">
           <Image
-            src={image}
+            src={images[0].url}
             alt={title}
             layout="fill"
             objectFit="cover"

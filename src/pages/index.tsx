@@ -2,7 +2,17 @@ import { useState, useEffect, useMemo } from 'react'
 import Layout from '../components/Layout'
 import TripCard from '../components/TripCard'
 import { GetStaticProps } from 'next'
-import { HomeProps } from '../types/homeProps'
+import { HomeProps } from '@/types/homeProps'
+import { Trip, ItineraryItem, Flight, Location } from '@/types/trip'
+
+// Type for raw JSON data
+type RawItineraryItem = {
+  type: string
+  id: string
+  startDate: string
+  endDate: string
+  data: Flight | Location
+}
 
 export default function Home(props: HomeProps) {
   const { textContent, trips } = props
@@ -83,15 +93,12 @@ export default function Home(props: HomeProps) {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          {trips.map((trip) => (
-            <TripCard 
-              key={trip.id} 
-              id={trip.id}
-              title={trip.title}
-              image={trip.image}
-              description={trip.description}
-            />
-          ))}
+          <TripCard 
+            id={trips.id}
+            title={trips.title}
+            images={trips.images}
+            description={`${trips.dates.departure_date} - ${trips.dates.return_date}`}
+          />
         </div>
       </div>
     </Layout>
@@ -100,14 +107,23 @@ export default function Home(props: HomeProps) {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const textContent = await import('@/content/text.json')
-  const trips = await import('@/content/trips.json')
+  const tripsData = await import('@/content/itinerary_hawaii.json')
+
+  // Ensure the imported data matches our types
+  const trips: Trip = {
+    ...tripsData.default,
+    itinerary: tripsData.default.itinerary.map((item: RawItineraryItem): ItineraryItem => ({
+      ...item,
+      type: item.type as 'flight' | 'stay'  // This ensures type is correctly narrowed
+    }))
+  }
 
   return {
     props: {
       textContent: textContent.default,
-      trips: trips.default
+      trips
     },
-    revalidate: 60 * 60 * 24 // 24 hours
+    revalidate: 3600
   }
 }
 
